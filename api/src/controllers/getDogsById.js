@@ -1,5 +1,7 @@
 const getDogsById = (req, res) => {
-    res.status(200).send('Todo va saliendo bien perri')};
+    const { id } = req.params;
+    res.status(200).send(`Detalle del usuario ${id}`)
+};
 
 
 module.exports = getDogsById;
