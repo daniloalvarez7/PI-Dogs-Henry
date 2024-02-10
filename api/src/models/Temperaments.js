@@ -7,11 +7,11 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      id: {
-        type: DataTypes.UUID,
-        defautValue: DataTypes.UUIDV4,
-        primaryKey: true,
-        allowNull: false
-      }
-    });
+      // id: {
+      //   type: DataTypes.UUID,
+      //   defautValue: DataTypes.UUIDV4,
+      //   primaryKey: true,
+      //   allowNull: false
+      // },
+    }, { timestamps: false });
   };
