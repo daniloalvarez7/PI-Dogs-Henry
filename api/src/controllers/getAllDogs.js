@@ -6,7 +6,7 @@ const getAllDogs = async (req, res) => {
 
     try {
         if(name){
-            const dogsApi = (await axios.get(`https://api.thedogapi.com/v1/breeds`)).data;
+            const dogsApi = (await axios.get(`https://api.thedogapi.com/v1/breeds?api_key=live_qQWZtRxVexywr7hq7iWj1gYIcQdOMxmFNshbWHHFhBVkjW9qfioShByJicFoXoAe `)).data;
 
             const dogApiFiltered = dogsApi.filter(dog => dog.name === name)
 
@@ -19,7 +19,7 @@ const getAllDogs = async (req, res) => {
         else{
             const dogsDb = await Dog.findAll();
             
-            let dogsApi = (await axios.get(`https://api.thedogapi.com/v1/breeds`)).data;
+            let dogsApi = (await axios.get(`https://api.thedogapi.com/v1/breeds?api_key=live_qQWZtRxVexywr7hq7iWj1gYIcQdOMxmFNshbWHHFhBVkjW9qfioShByJicFoXoAe`)).data;
             
             const allDogs = [...dogsDb, ...dogsApi]
             
